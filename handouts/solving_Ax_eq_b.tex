@@ -1,0 +1,51 @@
+\documentclass{tufte-handout}
+\usepackage{amsmath, amsfonts}
+
+\author{Gilbert Strang}
+\title{Solving Ax = b: Row Reduced Form R}
+
+\begin{document}
+
+\maketitle
+
+\section{Solvability conditions on $b$}
+The system of equations $Ax = b$ is solvable exactly when $b$ is in
+the column space $\mathrm{C(A)}$.
+
+\section{Complete solution to $Ax = b$}
+To find complete solution to a solvable system of equation $Ax = b$
+
+\begin{itemize}
+\item[(i)] Find $x_p$, a particular solution of $Ax = b$ by setting all
+free variables to zero and solve for pivot variables.
+
+\item[(ii)] Find $x_n$, general solution to the homogenous equation
+$Ax = 0$.
+\end{itemize}
+
+The general solution to $Ax = b$ is given by $x = x_p + x_n$.
+\section{Rank of a matrix}
+The rank of a matrix is the number of pivots of that matrix. If $r$
+is the \emph{rank} of an $m \times n$ matrix $A$. Then $r \leq m$ and
+$r \leq n$.
+
+\subsection{Full column rank}
+If $r = n$, then \emph{nullspace} contains only the \emph{zero vector}.
+If $Ax = b$ has a solution it is unique, so that there is either $0$ or
+$1$ solution.
+
+\subsection{Full row rank}
+If $r = m$, the equation $Ax = b$ can be solved for any $b$. Since there
+are $n - r = n - m$ free variables, the equation $Ax = 0$ has $n - m$
+special solutions.
+
+\subsection{Full row and column rank}
+If $r = m = n$, then $A$ is an \emph{invertible} square matrix. The
+\emph{nullspace} has dimension $0$, $Ax = b$ has a unique solution for
+every $b$ in $\mathbb{R}^m$.
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
