@@ -1,0 +1,72 @@
+\documentclass{tufte-handout}
+\usepackage{amsmath, amsfonts, amsthm}
+
+\theoremstyle{definition} \newtheorem{definition}{Definition}
+\theoremstyle{remark} \newtheorem{remark}{Remark}
+
+\author{Gilbert Strang}
+\title{Independence Basis and Dimension}
+
+\begin{document}
+
+\maketitle
+
+\section{Linear independence}
+\begin{definition}[Independence]
+  The set of vectors $v_1, v_2, \ldots v_n$ are
+  \emph{linearly independent} if $c_1v_1 + c_2v_2+ \ldots + c_nv_n = 0$
+  only when $c_1, c_2, \ldots c_n$ are all $0$.
+\end{definition}
+
+\begin{definition}[Span of a vector space]
+  Vectors $v_1, v_2, \ldots v_k$ span a vector space, if their linear
+  combination fill the space.
+\end{definition}
+
+\begin{definition}[Basis of a vector space]
+  A \emph{basis} of a vector space is a sequence of vectors
+  $v_1, v_2, \ldots v_d$ with two properties:
+  \begin{enumerate}[(i)]
+  \item $v_1, v_2, \ldots v_d$ are independent
+  \item $v_1, v_2, \ldots v_d$ span the vector space
+  \end{enumerate}
+\end{definition}
+Given a vector space every basis for that space has same number of
+vectors; that number is the \emph{dimension} of the space.
+
+\begin{definition}[Sum of two subspaces]
+  If $S$ and $T$ are two subspaces of a vector space $V$. Then the sum
+  $S + T$ contains sums $s + t$ for all $s \in S$, $t \in T$.
+\end{definition}
+
+\begin{remark}
+  If $S$ and $T$ are two subspaces of a vector space
+$V$. Then $S \cap T$ is a subspace, while $S \cup T$ is not a subspace.
+The span of $S \cup T$ is the subspace $S + T$.
+\end{remark}
+
+\begin{definition}
+  If $S$ and $T$ are two subspaces of a vector space $V$. Then
+  \begin{equation*}
+    dim(S) + dim(T) = dim(S + T) + dim(S \cap T)
+  \end{equation*}
+\end{definition}
+
+\section{Four fundamental spaces associated with a matrix}
+For any $m \times n$ matrix $A$, with \emph{rank}$(A) = r$, four
+fundamental subspaces are:
+\begin{enumerate}
+\item \emph{Column space}, $\mathrm{C}(A)$, consists of all combinations
+  of the columns of $A$ and is a subspace of $\mathrm{R}^m$.
+  $dim(\mathrm{C}(A)) = r$
+\item \emph{Nullspace}, $\mathrm{N}(A)$, consists of all solutions $x$
+  of the equation $Ax = 0$ and is a subspace of $\mathrm{R}^n$.
+  $dim(\mathrm{N}(A)) = n - r$
+\item \emph{Row space} of $A$, $\mathrm{C}(A^T)$, consists of
+  combinations of the column vectors of $A^T$.
+  $dim(\mathrm{C}(A^T)) = r$.
+\item \emph{Left Nullspace} of $A$, $\mathrm{N}(A^T)$, is the nullspace
+  of $A^T$. $dim(\mathrm{N}(A^T)) = m - r$.
+\end{enumerate}
+
+\end{document}

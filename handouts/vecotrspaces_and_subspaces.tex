@@ -1,0 +1,49 @@
+\documentclass{tufte-handout}
+\usepackage{amsmath, amsfonts, amsthm}
+
+\theoremstyle{definition} \newtheorem{definition}{Definition}
+
+\author{Gilbert Strang}
+\title{Vector Spaces and Subspaces}
+
+\begin{document}
+
+\maketitle
+
+\section{Spaces of Vectors}
+\begin{definition}[Vector Space]
+  The space $\mathrm{R}^n$ consists of all column vectors $v$ with
+  $n$ components.
+\end{definition}
+
+\begin{definition}[Subspace]
+  A subspace of a vector space is a set of vectors that satisfies two
+  requirements. If $u$ and $v$ are vectors in the subspace and $c$ is
+  any scalar, then
+  \begin{enumerate}[(i)]
+  \item $u + v$ is in the subspace
+  \item $cu$ is in the subspace
+  \end{enumerate}
+\end{definition}
+
+\section{Column space of $A$}
+\begin{definition}[Column space]
+  The column space of a matrix $A$, $\mathrm{C}(A)$ is the
+  vector space made up of all linear combinations of the columns of $A$.
+\end{definition}
+
+\newthought{}The system of linear equations $Ax = b$ is solvable exactly
+when vector $b$ is in the \emph{column space} of $A$.
+
+\section{Nullspace of $A$}
+\begin{definition}[Nullspace]
+  The \emph{nullspace} of a matrix $A$, $\mathrm{N}(A)$ is the vector
+  space consists of all solutions $x$ to the equation $Ax = 0$.
+\end{definition}
+
+\newthought{}The \emph{rank} of an $m \times n$ matrix $A$ is the number
+of pivot columns, so the number of free columns is $n - r$, which is the
+number of \emph{special solutions} and the \emph{dimension} of the
+\emph{nullspace}.
+
+\end{document}

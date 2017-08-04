@@ -1,0 +1,72 @@
+\documentclass{tufte-handout}
+\usepackage{amsmath, amsfonts}
+
+\author{Gilbert Strang}
+\title{Matrix Basics}
+
+\begin{document}
+
+\maketitle
+
+\section{Some basic results}
+Some important results
+\begin{enumerate}[(i)]
+\item $(AB)^T = B^TA^T$.
+\item $(AB)^{-1} = B^{-1}A^{-1}$.
+\item If $A$ is invertible $(A^T)^{-1} = (A^{-1})^{T}$.
+\item For a symmetric matrix $A$, it's inverse $A^{-1}$ is also symmetric.
+\end{enumerate}
+
+\section{Matrix multiplication}
+If we subdivide $A$ and $B$ into blocks that match properly, we can write
+the product $AB = C$ in terms of products of the blocks:
+\begin{equation*}
+  \begin{bmatrix}
+    A_{1} & A_{2} \\
+    A_{3} & A_{4}
+  \end{bmatrix}
+  \begin{bmatrix}
+    B_{1} & B_{2} \\
+    B_{3} & B_{4}
+  \end{bmatrix}
+  =
+  \begin{bmatrix}
+    C_1 & C_2 \\
+    C_3 & C_4
+  \end{bmatrix}
+\end{equation*}
+Here $C_1 = A_1B_1 + A_2B_3$.
+
+\section{Elimination = Factorization}
+When there are no row exchanges, elimination leads to the form
+\begin{equation*}
+  A = LU
+\end{equation*}
+The matrix $U$ is \emph{upper triangular} with \emph{pivots} on the
+diagonal. The matrix $L$ is \emph{lower triangular} and has \emph{ones}
+on the diagonal.
+
+\newthought{}When row exchanges are required, elimination leads to
+\begin{equation*}
+  PA = LU
+\end{equation*}
+The matrix $P$ is a \emph{permutation matrix}, which has the rows of $I$
+in some order.
+
+\newthought{}Some important properties of \emph{Permutation matrices}:
+\begin{enumerate}[(i)]
+\item $P^{-1} = p^T$
+\item Permutation matrices form a multiplicative group. Order of this
+  group is $n!$
+\end{enumerate}
+
+\section{Cost of elimination}
+For an $n \times n$ matrix $A$, the cost of factoring $A$ into $LU$ is
+on the order of $n^3$.
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

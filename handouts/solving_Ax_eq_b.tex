@@ -15,13 +15,13 @@ the column space $\mathrm{C(A)}$.
 \section{Complete solution to $Ax = b$}
 To find complete solution to a solvable system of equation $Ax = b$
 
-\begin{itemize}
-\item[(i)] Find $x_p$, a particular solution of $Ax = b$ by setting all
+\begin{enumerate}[(i)]
+\item Find $x_p$, a particular solution of $Ax = b$ by setting all
 free variables to zero and solve for pivot variables.
 
-\item[(ii)] Find $x_n$, general solution to the homogenous equation
+\item Find $x_n$, general solution to the homogenous equation
 $Ax = 0$.
-\end{itemize}
+\end{enumerate}
 
 The general solution to $Ax = b$ is given by $x = x_p + x_n$.
 \section{Rank of a matrix}
@@ -43,6 +43,8 @@ special solutions.
 If $r = m = n$, then $A$ is an \emph{invertible} square matrix. The
 \emph{nullspace} has dimension $0$, $Ax = b$ has a unique solution for
 every $b$ in $\mathbb{R}^m$.
+
+\newthought{}$rank(AB) \leq \min(rank(A), rank(B))$
 \end{document}
 
 %%% Local Variables:
