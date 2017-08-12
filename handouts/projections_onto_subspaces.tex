@@ -1,0 +1,68 @@
+\documentclass{tufte-handout}
+\usepackage{amsmath, amsfonts, amsthm}
+
+\theoremstyle{definition} \newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\theoremstyle{remark} \newtheorem{remark}{Remark}
+
+\author{Gilbert Strang}
+\title{Projections onto subspaces}
+
+\begin{document}
+
+\maketitle
+
+\section{Projections}
+The equation $Ax = b$ is solvable only when $b$ is in the column space
+of $A$. If $b$ is not in the column space of $A$, then $A\hat{x}$ is
+closest to $b$ if
+\begin{equation*}
+  A^T(b - A\hat{x}) = 0 \quad \text{or}  \quad A^TA\hat{x} = A^Tb
+\end{equation*}
+
+The \emph{projection} of $b$ onto the subspace is
+\begin{equation*}
+  p = A\hat{x} = A(A^TA)^{-1}A^Tb
+\end{equation*}
+
+The \emph{projection matrix} $P$ that produces $p = Pb$ is
+\begin{equation*}
+  P = A(A^TA)^{-1}A^T
+\end{equation*}
+
+\begin{remark}
+  When $A$ has \emph{independent} columns, $A^TA$ is square, symmetric
+  and invertible.
+\end{remark}
+
+\begin{remark}
+  If $P$ is a \emph{projection matrix} then
+  \begin{equation*}
+    P^T = P \quad \text{and} \quad P^2 = P
+  \end{equation*}
+\end{remark}
+
+\begin{remark}
+  When $P$ projects onto one subspace $I - P$ projects onto the
+  \emph{perpendicular subspace}.
+\end{remark}
+
+\begin{remark}
+ For a $2 \times 2$ matrix
+ \begin{equation*}
+   \left(
+     \begin{bmatrix}
+       a & b \\
+       c & d
+     \end{bmatrix}
+     \right)^{-1}
+     \quad = \quad
+     \frac{1}{ad - bc}
+   \begin{bmatrix}
+     d & -b \\
+     -c & a
+   \end{bmatrix}
+ \end{equation*}
+\end{remark}
+
+\end{document}

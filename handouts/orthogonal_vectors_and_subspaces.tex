@@ -1,0 +1,47 @@
+\documentclass{tufte-handout}
+\usepackage{amsmath, amsfonts, amsthm}
+
+\theoremstyle{definition} \newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\theoremstyle{remark} \newtheorem{remark}{Remark}
+
+\author{Gilbert Strang}
+\title{Orthogonal vectors and subspaces}
+
+\begin{document}
+
+\maketitle
+
+\section{Orthoganality of the Four Subspaces}
+\begin{definition}[Orthogonal subspaces]
+  Subspace $S$ is said to be \emph{orthogonal} to a subspace $T$, if
+  every vector in $S$ is orthogonal to every vector in $T$.
+\end{definition}
+
+\begin{remark}
+  Every vector $x$ in the \emph{nullspace} of $A$ is perpendicular to
+  every row of $A$. The \emph{nullspace} $\mathrm{N}(A)$ and the
+  \emph{row space} $\mathrm{C}(A^T)$ are orthogonal subspaces of $R^n$.
+\end{remark}
+
+\begin{remark}
+  Every vector $y$ in the \emph{nullspace} of $A^T$ is perpendicular to
+  every column of $A$. The \emph{nullspace} $\mathrm{N}(A^T)$ and the
+  \emph{column space} $\mathrm{C}(A)$ are orthogonal subspaces of $R^m$.
+\end{remark}
+
+\section{Orthogonal Complements}
+\begin{definition}[Orthogonal complement]
+  The \emph{orthogonal complement} of a subspace $V$ contains every vector
+  that is perpendicular to $V$. This orthogonal subspace is denoted by
+  $V^{\perp}$.
+\end{definition}
+
+
+\begin{theorem}[Fundamental Theorem of Linear Algebra]
+  $\mathrm{N}(A)$ is the orthogonal complement of the row space
+  $\mathrm{C}(A^T)$(in $R^n$). $\mathrm{N}(A^T)$ is the orthogonal
+  complement of the column space $\mathrm{C}(A)$(in $R^m$).
+\end{theorem}
+
+\end{document}

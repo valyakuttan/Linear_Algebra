@@ -4,8 +4,12 @@
 # This is a 1x4 matrix [[0, 1, 2, 3, 4]]
 # and this is a 4x1 matrix [[0], [1], [2], [3], [4]]
 
-__all__ =['multiply', 'transpose', 'add', 'id', 'zero', 'dimension']
+#__all__ =['multiply', 'transpose', 'add', 'id', 'zero', 'dimension']
 
+"""
+>>> 1 + 2
+3
+"""
 def multiply(m1, m2):
     assert num_cols(m1) == num_rows(m2)
     return [combine_rows(r, m2) for r in m1]
@@ -44,3 +48,7 @@ def add_rows(*rows):
 
 def scale_row(c, r):
     return [c * x for x in r]
+
+def test():
+    import doctest
+    doctest.testmod()
