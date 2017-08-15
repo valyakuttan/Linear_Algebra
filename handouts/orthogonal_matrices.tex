@@ -1,0 +1,33 @@
+\documentclass{tufte-handout}
+\usepackage{amsmath, amsfonts, amsthm}
+
+\theoremstyle{definition} \newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\theoremstyle{remark} \newtheorem{remark}{Remark}
+
+\author{Gilbert Strang}
+\title{Title of the handout}
+
+\begin{document}
+
+\maketitle
+
+\section{Orhogonal matrices}
+\begin{definition}[Orthonormal vectors]
+  The vectors $q_1, q_2, \ldots q_n$ are \emph{orthonormal} if:
+  \begin{equation*}
+    q_i^Tq_j =
+    \begin{cases}
+      0 & \text{if } i \ne j,\\
+      1 & \text{if } i = j.
+    \end{cases}
+  \end{equation*}
+\end{definition}
+
+\begin{remark}[Orthogonal matrix]
+  If the columns of $[q_1  \ldots q_n]$ are \emph{orthonormal},
+  then $Q^TQ = I$. A matrix with orthonormal columns is called
+  an \emph{orthonormal matrix} and if the matrix is square it is called an
+  \emph{orthogonal matrix}. Then $Q^T = Q^{-1}$.
+\end{remark}
+\end{document}
